@@ -12,7 +12,7 @@ import sqlite3
 app = Flask(__name__)
 
 # Set up the Google API Key
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAwL2Rkb-X3Xu8tTD8qV-vUokj2heL2Q1A"
+os.environ["GOOGLE_API_KEY"] = "Enter the api kye here"
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 
 # Initialize the Gemini model
