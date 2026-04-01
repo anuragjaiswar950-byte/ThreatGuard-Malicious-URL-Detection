@@ -1,0 +1,73 @@
+2025-09-24 18:44:48,562 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-24 18:44:48,563 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-24 18:44:48,565 - INFO -  * Restarting with stat
+2025-09-24 18:44:50,966 - WARNING -  * Debugger is active!
+2025-09-24 18:44:50,969 - INFO -  * Debugger PIN: 781-929-951
+2025-09-24 18:45:10,954 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-24 18:45:10,954 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-24 18:45:10,956 - INFO -  * Restarting with stat
+2025-09-24 18:45:13,081 - WARNING -  * Debugger is active!
+2025-09-24 18:45:13,083 - INFO -  * Debugger PIN: 781-929-951
+2025-09-24 18:45:28,135 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-24 18:45:28,135 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-24 18:45:28,137 - INFO -  * Restarting with stat
+2025-09-24 18:45:30,279 - WARNING -  * Debugger is active!
+2025-09-24 18:45:30,282 - INFO -  * Debugger PIN: 781-929-951
+2025-09-24 18:46:12,722 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-24 18:46:12,722 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-24 18:46:12,724 - INFO -  * Restarting with stat
+2025-09-24 18:46:14,747 - WARNING -  * Debugger is active!
+2025-09-24 18:46:14,749 - INFO -  * Debugger PIN: 781-929-951
+2025-09-24 18:46:50,575 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-24 18:46:50,575 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-24 18:46:50,576 - INFO -  * Restarting with stat
+2025-09-24 18:46:52,807 - WARNING -  * Debugger is active!
+2025-09-24 18:46:52,810 - INFO -  * Debugger PIN: 781-929-951
+2025-09-24 18:47:56,894 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-24 18:47:56,894 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-24 18:47:56,896 - INFO -  * Restarting with stat
+2025-09-24 18:47:59,018 - WARNING -  * Debugger is active!
+2025-09-24 18:47:59,020 - INFO -  * Debugger PIN: 781-929-951
+2025-09-24 18:48:06,512 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-24 18:48:06,513 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-24 18:48:06,514 - INFO -  * Restarting with stat
+2025-09-24 18:48:08,654 - WARNING -  * Debugger is active!
+2025-09-24 18:48:08,656 - INFO -  * Debugger PIN: 781-929-951
+2025-09-24 18:50:36,869 - INFO - 127.0.0.1 - - [24/Sep/2025 18:50:36] "GET / HTTP/1.1" 200 -
+2025-09-24 18:58:21,218 - INFO -  * Detected change in 'C:\\Users\\Anurag\\PycharmProjects\\Malicious URL APP\\MAIN0.py', reloading
+2025-09-24 18:58:21,541 - INFO -  * Restarting with stat
+2025-09-24 18:58:23,786 - WARNING -  * Debugger is active!
+2025-09-24 18:58:23,789 - INFO -  * Debugger PIN: 781-929-951
+2025-09-24 18:59:27,485 - INFO -  * Detected change in 'C:\\Users\\Anurag\\PycharmProjects\\Malicious URL APP\\MAIN0.py', reloading
+2025-09-24 18:59:27,807 - INFO -  * Restarting with stat
+2025-09-24 18:59:30,071 - WARNING -  * Debugger is active!
+2025-09-24 18:59:30,075 - INFO -  * Debugger PIN: 781-929-951
+2025-09-24 19:02:30,754 - INFO -  * Detected change in 'C:\\Users\\Anurag\\PycharmProjects\\Malicious URL APP\\MAIN0.py', reloading
+2025-09-24 19:02:31,105 - INFO -  * Restarting with stat
+2025-09-24 19:02:33,115 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-24 19:02:33,115 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-24 19:02:33,117 - INFO -  * Restarting with stat
+2025-09-24 19:02:33,681 - WARNING -  * Debugger is active!
+2025-09-24 19:02:33,684 - INFO -  * Debugger PIN: 781-929-951
+2025-09-24 19:02:35,347 - WARNING -  * Debugger is active!
+2025-09-24 19:02:35,350 - INFO -  * Debugger PIN: 781-929-951
+2025-09-24 19:04:49,420 - INFO -  * Detected change in 'C:\\Users\\Anurag\\PycharmProjects\\Malicious URL APP\\MAIN0.py', reloading
+2025-09-24 19:04:49,796 - INFO -  * Restarting with stat
+2025-09-24 19:04:51,066 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-24 19:04:51,067 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-24 19:04:51,068 - INFO -  * Restarting with stat
+2025-09-24 19:04:52,271 - WARNING -  * Debugger is active!
+2025-09-24 19:04:52,276 - INFO -  * Debugger PIN: 781-929-951
+2025-09-24 19:04:53,466 - WARNING -  * Debugger is active!
+2025-09-24 19:04:53,468 - INFO -  * Debugger PIN: 781-929-951
+2025-09-24 19:06:11,674 - INFO -  * Detected change in 'C:\\Users\\Anurag\\PycharmProjects\\Malicious URL APP\\MAIN0.py', reloading
+2025-09-24 19:06:12,033 - INFO -  * Restarting with stat

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThreatGuard</title>
+    <!-- Using Font Awesome 6 for modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0d1117;
+            --bg-medium: #161b22;
+            --bg-light: #1c2128;
+            --text-color: #ffffff;
+            --primary-blue: #58a6ff;
+            --primary-green: #238636;
+            --primary-green-hover: #2ea043;
+            --primary-blue-btn: #2563eb;
+            --primary-blue-btn-hover: #1d4ed8;
+            --border-color: #30363d; /* Softer border */
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-medium: rgba(0, 0, 0, 0.2);
+            --shadow-strong: rgba(0, 0, 0, 0.4);
+            --border-radius-sm: 6px;
+            --border-radius-md: 10px;
+            --transition-speed: 0.2s ease-in-out;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif; /* Modern font */
+            background-color: var(--bg-dark);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh; /* Use min-height for better content flow */
+            padding-top: 120px; /* Space for fixed navbar */
+            box-sizing: border-box;
+        }
+
+        /* Navbar */
+        .navbar {
+            width: 100%;
+            background: var(--bg-medium);
+            padding: 20px 0; /* Reduced padding */
+            text-align: center;
+            box-shadow: 0 4px 15px var(--shadow-strong);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 36px; /* Slightly larger */
+            font-weight: 700; /* Bolder */
+            color: var(--primary-blue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /* Space between icon and text */
+        }
+
+        .navbar h1 i {
+            font-size: 32px;
+            color: var(--primary-blue);
+        }
+
+        .container {
+            background: var(--bg-light);
+            padding: 40px 50px; /* More horizontal padding */
+            border-radius: var(--border-radius-md);
+            width: 90%; /* Wider on larger screens */
+            max-width: 700px; /* Max width for readability */
+            text-align: center;
+            box-shadow: 0 8px 30px var(--shadow-strong);
+            margin-bottom: 40px; /* Space at the bottom */
+            border: 1px solid var(--border-color); /* Subtle border */
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-top: 0;
+            margin-bottom: 30px; /* More space below headings */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        h2 i {
+            font-size: 22px;
+            color: var(--primary-blue);
+        }
+
+        form {
+            margin-bottom: 40px; /* Space between forms */
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            background-color: var(--bg-medium);
+            box-shadow: 0 4px 15px var(--shadow-medium);
+        }
+
+        form:last-of-type {
+            margin-bottom: 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 15px; /* More space below label */
+            font-size: 16px;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            width: calc(100% - 30px); /* Adjust width for padding */
+            padding: 15px; /* More padding */
+            font-size: 16px;
+            border: 1px solid var(--border-color); /* Softer border */
+            border-radius: var(--border-radius-sm);
+            background-color: var(--bg-medium);
+            color: var(--text-color);
+            margin-bottom: 20px; /* More space */
+            transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+            box-shadow: inset 0 1px 3px var(--shadow-light);
+        }
+
+        input[type="text"]:focus,
+        input[type="file"]:focus {
+            border-color: var(--primary-blue);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3); /* Focus ring */
+        }
+
+        /* Custom file input styling */
+        input[type="file"] {
+            display: none; /* Hide default file input */
+        }
+
+        .file-upload-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .custom-file-input {
+            background-color: var(--bg-medium);
+            color: var(--primary-blue);
+            padding: 12px 18px;
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+            border: 1px solid var(--primary-blue);
+            transition: background-color var(--transition-speed), border-color var(--transition-speed);
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .custom-file-input:hover {
+            background-color: var(--primary-blue);
+            color: var(--bg-dark);
+        }
+
+        #file-name {
+            flex-grow: 1;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            background-color: var(--bg-medium);
+            color: #ccc;
+            font-style: italic;
+            font-size: 15px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+
+        button {
+            background-color: var(--primary-green);
+            color: var(--text-color);
+            padding: 15px 25px; /* More padding */
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+            width: 100%;
+            transition: all var(--transition-speed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px; /* More space for icons */
+            border: none;
+            box-shadow: 0 4px 10px var(--shadow-medium);
+        }
+
+        button:hover {
+            background-color: var(--primary-green-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px var(--shadow-strong);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 5px var(--shadow-medium);
+        }
+
+        .history-btn {
+            background-color: var(--primary-blue-btn); /* blue */
+            margin-top: 30px; /* More space */
+        }
+        .history-btn:hover {
+            background-color: var(--primary-blue-btn-hover);
+            transform: translateY(-2px);
+        }
+        .history-btn:active {
+            transform: translateY(0);
+        }
+
+        .scan-icon {
+            font-size: 20px;
+        }
+
+        /* Spinner */
+        .spinner {
+            display: none;
+            margin: 20px auto 10px auto; /* Centered, more vertical margin */
+            border: 4px solid rgba(255, 255, 255, 0.2); /* Lighter border */
+            border-top: 4px solid var(--primary-blue); /* Primary accent */
+            border-radius: 50%;
+            width: 30px; /* Slightly smaller */
+            height: 30px;
+            animation: spin 0.8s linear infinite; /* Faster spin */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Result Styling */
+        .result-box {
+            margin-top: 30px; /* More space */
+            padding: 20px;
+            border-radius: var(--border-radius-md);
+            font-size: 17px;
+            text-align: left; /* Align text left within box */
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px var(--shadow-medium);
+        }
+
+        .result-box p {
+            margin: 5px 0;
+        }
+
+        .result-box strong {
+            color: var(--primary-blue);
+        }
+
+        .benign { border-left: 5px solid #34D399; } /* Green */
+        .defacement { border-left: 5px solid #F59E0B; } /* Orange */
+        .malware { border-left: 5px solid #EF4444; } /* Red */
+        .phishing { border-left: 5px solid #8B5CF6; } /* Purple */
+        .unknown { border-left: 5px solid #cccccc; } /* Light Gray */
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .navbar h1 {
+                font-size: 28px;
+            }
+            .navbar h1 i {
+                font-size: 26px;
+            }
+            .container {
+                width: 95%;
+                padding: 30px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            input, button {
+                font-size: 16px;
+                padding: 12px;
+            }
+            .custom-file-input {
+                padding: 10px 15px;
+            }
+            #file-name {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1><i class="fas fa-shield-alt"></i> ThreatGuard</h1>
+    </div>
+
+    <div class="container">
+        <h2><i class="fas fa-file-upload"></i> Malicious Files</h2>
+        <form action="/scam/" method="post" enctype="multipart/form-data" onsubmit="showLoader('fileSpinner')">
+            <label for="file-upload-input">Upload a file (PDF/TXT/DOCX/CSV only):</label>
+            <div class="file-upload-wrapper">
+                <input type="file" name="file" id="file-upload-input" required onchange="updateFileName()">
+                <label for="file-upload-input" class="custom-file-input">Browse...</label>
+                <span id="file-name">No file selected.</span>
+            </div>
+            <button type="submit"><i class="fas fa-cloud-upload-alt scan-icon"></i> Analyze File</button>
+            <div id="fileSpinner" class="spinner"></div>
+        </form>
+
+        {% if message %}
+        <h3>Result:</h3>
+        <p>{{ message }}</p>
+        {% endif %}
+
+        <h2><i class="fas fa-link"></i> URL Threat Detection</h2>
+        <form method="post" action="/predict" onsubmit="showLoader('urlSpinner')">
+            <label for="url-input">Enter URL:</label>
+            <input type="text" name="url" id="url-input" placeholder="e.g., https://malicious-site.com" required>
+            <button type="submit"><i class="fas fa-magnifying-glass scan-icon"></i> Classify URL</button>
+            <div id="urlSpinner" class="spinner"></div>
+        </form>
+
+        {% if predicted_class %}
+            <div class="result-box {{ predicted_class.lower() }}">
+                <p><strong>URL:</strong> {{ input_url }}</p>
+                <p><strong>Predicted Class:</strong> {{ predicted_class }}</p>
+                <p><strong>Threat Level:</strong> {{ threat_score }}/100</p>
+            </div>
+        {% endif %}
+
+        <!-- View History Button -->
+        <a href="/history">
+            <button type="button" class="history-btn">
+                <i class="fas fa-history"></i> View History
+            </button>
+        </a>
+    </div>
+
+    <script>
+        function showLoader(spinnerId) {
+            document.getElementById(spinnerId).style.display = 'block';
+        }
+
+        function updateFileName() {
+            const fileInput = document.getElementById('file-upload-input');
+            const fileNameSpan = document.getElementById('file-name');
+            if (fileInput.files.length > 0) {
+                fileNameSpan.textContent = fileInput.files[0].name;
+                fileNameSpan.style.fontStyle = 'normal';
+                fileNameSpan.style.color = 'var(--text-color)';
+            } else {
+                fileNameSpan.textContent = 'No file selected.';
+                fileNameSpan.style.fontStyle = 'italic';
+                fileNameSpan.style.color = '#ccc';
+            }
+        }
+    </script>
+
+</body>
+</html>

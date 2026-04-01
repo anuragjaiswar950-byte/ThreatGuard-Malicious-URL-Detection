@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan History</title>
+    <style>
+        body { font-family: Arial, sans-serif; background:#0d1117; color:white; padding:20px; }
+        table { width:100%; border-collapse: collapse; background:#161b22; }
+        th, td { padding:10px; border:1px solid #333; text-align:center; }
+        th { background:#1c2128; }
+        tr:hover { background:#22272e; }
+        a { color:#58a6ff; text-decoration:none; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Scan History</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Input</th>
+            <th>Result</th>
+            <th>Score</th>
+            <th>Date</th>
+        </tr>
+        {% for row in history %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">⬅ Back to Home</a>
+</body>
+</html>
